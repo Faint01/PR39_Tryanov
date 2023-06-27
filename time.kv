@@ -1,0 +1,26 @@
+MDFloatLayout:
+
+    MDTopAppBar:
+        id: toolbar
+        title: "MDTopAppBar"
+        pos_hint: {"top": 1}
+
+	MDRaisedButton:
+		text: "Выбрать время"
+		pos_hint: {'center_x': .5, 'center_y': .5}
+		on_release: app.show_time_picker()
+		md_bg_color: toolbar.md_bg_color
+	MDLabel:
+		id: time_label
+		text: "Выбирите время!"
+		pos_hint: {'center_x': .95, 'center_y': .4}
+
+	MDRaisedButton:
+		text: "Выбрать дату"
+		pos_hint: {'center_x': .5, 'center_y': .3}
+		on_release: app.show_date_picker()
+		md_bg_color: toolbar.md_bg_color
+	MDLabel:
+		id: date_label
+		text: "Выберите дату!"
+		pos_hint: {'center_x': .95, 'center_y': .2}
